@@ -31,6 +31,7 @@ function addNewBook() {
 
 function bookList() {
     bookListContainer = document.getElementById("books")
+    bookListContainer.innerHTML = ""
     books = getFromStorage();
     books.map((book, index) => {
         const bookContainer = document.createElement("li")
@@ -50,9 +51,7 @@ function bookList() {
 }
 
 function removeBook(id) {
-  console.log(books)
   books.splice(id, 1)
-  console.log(books)
   saveToStorage(books)
 }
 
