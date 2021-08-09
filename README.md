@@ -1,3 +1,11 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# The Awesome Books
+
+Basic website that allows users to add/remove books from a list. 
+
+- Project Goals: Demonstrate ability to use different ways to create objects in JavaScript, and create/access properties and methods of JavaScript objects.
+
 ![screenshot](./app_screenshot.png)
 
 ## Built With
@@ -8,7 +16,7 @@
 
 ## Live Demo
 
-[Live Demo Link](...)
+[Live Demo Link](https://alef-garrido.github.io/theAwesomeBooks/)
 
 ## How to use this repo
 
