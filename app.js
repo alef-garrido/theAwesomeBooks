@@ -50,10 +50,9 @@ function bookList() {
 }
 
 function removeBook(id) {
-  console.log(books)
-  books.splice(id, 1)
-  console.log(books)
-  saveToStorage(books)
+  books.forEach((b) => {
+    
+  })
 }
 
 const displayContainer = document.querySelector('#books')

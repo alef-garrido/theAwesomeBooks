@@ -14,9 +14,9 @@
 
 1. Clone the repo
 2. In your terminal, run `npm install`
-3. In your terminal, run `npm run dev`
 
-You are good to go! It will watch all your files for changes automatically and live update your browser. 
+
+You are good to go! 
 
 ## When you are ready to go to production
 
@@ -24,6 +24,11 @@ You are good to go! It will watch all your files for changes automatically and l
 
 
 ## Authors
+
+👤 Maha Magdy 
+- GitHub: [Maha-Magdy](https://github.com/Maha-Magdy) 
+- Twitter: [@Maha_M_Abdelaal](https://twitter.com/Maha_M_Abdelaal) 
+- LinkedIn: [Maha Magdy](https://www.linkedin.com/in/maha-magdy-abdelaal/) 
 
 👤 Alef Garrido
 
