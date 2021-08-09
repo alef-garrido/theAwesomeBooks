@@ -26,7 +26,26 @@ function addNewBook() {
 
     books.push(newBook)
     saveToStorage(books)
-    console.log("Here are your book list", getFromStorage())
+    bookList()
 }
 
+function bookList() {
+    bookListContainer = document.getElementById("books")
+    books = getFromStorage();
+    books.map(book => {
+        bookContainer = document.createElement("li")
+        title_p_tag =  document.createElement("p")
+        title_p_tag.appendChild(document.createTextNode(book.title));
 
+        author_p_tag =  document.createElement("p")
+        author_p_tag.appendChild(document.createTextNode(book.author));
+
+        remove_button_tag =  document.createElement("button")
+        remove_button_tag.appendChild(document.createTextNode("Remove"));
+
+        bookContainer.append(title_p_tag, author_p_tag, remove_button_tag);
+
+        bookListContainer.appendChild(bookContainer);
+    })
+    
+}
