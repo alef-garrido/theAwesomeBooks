@@ -55,7 +55,6 @@ function addNewBook() {
 
 function removeBook(id) {
   books.splice(id, 1);
-  saveToStorage(books);
 }
 
 const displayContainer = document.querySelector('#books');
