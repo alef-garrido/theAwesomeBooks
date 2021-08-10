@@ -41,7 +41,7 @@ class BookCollection {
     const newBook = new Book(title, author);
   
     this.books.push(newBook);
-    CollectionStorage.saveToStorage(books);
+    CollectionStorage.saveToStorage(this.books);
     this.bookList();
   }
 
@@ -68,7 +68,7 @@ class BookCollection {
       removeButtonTag.classList.add("delete-btn");
   
       bookContainer.append(titlePTag, authorPTag, removeButtonTag);
-      BookCollectiContainer.appendChild(bookContainer);
+      BookCollectionContainer.appendChild(bookContainer);
     });
   }
 }
