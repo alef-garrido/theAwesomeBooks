@@ -1,67 +1,79 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable max-classes-per-file */
 /* eslint-disable array-callback-return */
 
-let books = [];
-
-function Book(title, author) {
-  this.title = title;
-  this.author = author;
-}
-
-function saveToStorage(arr) {
-  localStorage.setItem('bookList', JSON.stringify(arr));
-}
-
-function getFromStorage() {
-  if (localStorage.getItem('bookList') === null) {
-    books = [];
-  } else {
-    books = JSON.parse(localStorage.getItem('bookList'));
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
   }
-  return books;
 }
 
-function bookList() {
-  const bookListContainer = document.getElementById('books');
-  bookListContainer.innerHTML = '';
-  books = getFromStorage();
-  books.map((book, index) => {
-    const bookContainer = document.createElement('li');
-    const titlePTag = document.createElement('p');
-    titlePTag.appendChild(document.createTextNode(book.title));
-    bookContainer.id = index;
-    const authorPTag = document.createElement('p');
-    authorPTag.appendChild(document.createTextNode(book.author));
+// Class to Handle Storage
 
-    const removeButtonTag = document.createElement('button');
-    removeButtonTag.appendChild(document.createTextNode('Remove'));
-    removeButtonTag.classList.add('delete-btn');
+class CollectionStorage {
+  static saveToStorage(arr) {
+    localStorage.setItem('BookCollection', JSON.stringify(arr));
+  }
 
-    bookContainer.append(titlePTag, authorPTag, removeButtonTag);
-    bookListContainer.appendChild(bookContainer);
-  });
+  static getFromStorage() {
+    let books;
+    if (localStorage.getItem('BookCollection') === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem('BookCollection'));
+    }
+    return books;
+  }
 }
 
-function addNewBook() {
-  const title = document.getElementById('bookTitle').value;
-  const author = document.getElementById('bookAuthor').value;
+// Class of Book List
+class BookCollection {
+  books = []
 
-  const newBook = new Book(title, author);
+  static addNewBook() {
+    const title = document.getElementById('bookTitle').value;
+    const author = document.getElementById('bookAuthor').value;
 
-  books.push(newBook);
-  saveToStorage(books);
-  bookList();
-}
+    const newBook = new Book(title, author);
 
-function removeBook(id) {
-  books.splice(id, 1);
-  saveToStorage(books);
+    this.books.push(newBook);
+    CollectionStorage.saveToStorage(this.books);
+    this.bookList();
+  }
+
+  static removeBook(id) {
+    this.books.splice(id, 1);
+    CollectionStorage.saveToStorage(this.books);
+  }
+
+  static bookList() {
+    const BookCollectionContainer = document.getElementById('books');
+    BookCollectionContainer.innerHTML = '';
+
+    this.books = CollectionStorage.getFromStorage();
+
+    this.books.map((book, index) => {
+      const bookContainer = document.createElement('li');
+      const titlePTag = document.createElement('p');
+      titlePTag.appendChild(document.createTextNode(book.title));
+      bookContainer.id = index;
+      const authorPTag = document.createElement('p');
+      authorPTag.appendChild(document.createTextNode(book.author));
+
+      const removeButtonTag = document.createElement('button');
+      removeButtonTag.appendChild(document.createTextNode('Remove'));
+      removeButtonTag.classList.add('delete-btn');
+
+      bookContainer.append(titlePTag, authorPTag, removeButtonTag);
+      BookCollectionContainer.appendChild(bookContainer);
+    });
+  }
 }
 
 const displayContainer = document.querySelector('#books');
 displayContainer.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete-btn')) {
-    removeBook(e.target.parentNode.id);
+    BookCollection.removeBook(e.target.parentNode.id);
   }
-  bookList();
+  BookCollection.bookList();
 });
