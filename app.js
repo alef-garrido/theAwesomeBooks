@@ -1,8 +1,5 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable array-callback-return */
 /* eslint-disable max-classes-per-file */
-
-// let books = [];
+/* eslint-disable array-callback-return */
 
 class Book {
   constructor(title, author) {
