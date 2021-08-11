@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+  width: 25%;
+}
+
+li {
+  padding: 15px 0;
+}
+
+li:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin: 0;
+}
+
+.headline {
+  font-size: 2rem;
+}
+
+.mint-bottom-border {
+  border-bottom: 4px solid #78c2ad;
+}
+
+.float-right {
+  float: right;
+}

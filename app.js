@@ -55,16 +55,16 @@ class BookCollection {
     this.books.map((book, index) => {
       const bookContainer = document.createElement('li');
       const titlePTag = document.createElement('p');
-      titlePTag.appendChild(document.createTextNode(book.title));
+      titlePTag.appendChild(document.createTextNode(`"${book.title}" by ${book.author}`));
+      titlePTag.classList.add('ms-5');
       bookContainer.id = index;
-      const authorPTag = document.createElement('p');
-      authorPTag.appendChild(document.createTextNode(book.author));
+      bookContainer.classList.add('d-flex', 'justify-content-between');
 
       const removeButtonTag = document.createElement('button');
       removeButtonTag.appendChild(document.createTextNode('Remove'));
-      removeButtonTag.classList.add('delete-btn');
+      removeButtonTag.classList.add('delete-btn', 'me-5', 'btn', 'btn-secondary');
 
-      bookContainer.append(titlePTag, authorPTag, removeButtonTag);
+      bookContainer.append(titlePTag, removeButtonTag);
       BookCollectionContainer.appendChild(bookContainer);
     });
   }

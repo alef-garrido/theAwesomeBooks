@@ -5,29 +5,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <title>Awesome Books</title>
 </head>
 
 <body onload="BookCollection.bookList()">
-  <div>
-    <h1>The Awesome Books</h1>
+  <div class="text-center bg-light">
+    <h1 class="mt-4 mb-4 headline d-inline-block mx-auto">
+      <i class="fas fa-book"></i>
+      The Awesome Books</h1>
   </div>
-  <main>
-    <section>
-      <h2>Awesome Books List</h2>
-      <ul id="books">
+  <main class="w-50 mx-auto">
+    <section class="m-5 card">
+
+      <ul class="w-100 p-0 mb-0" id="books">
       </ul>
     </section>
+
+    <section class="px-5 text-center w-75 mx-auto">
+      <h3 class="mint-bottom-border d-inline-block mx-auto mb-4">Add a Book</h3>
+      <form id="addBook" onsubmit="BookCollection.addNewBook()">
+        <input class="d-block mb-2 mx-auto form-control" id="bookTitle" type="text" placeholder="Title" required>
+        <input class="d-block mb-2 mx-auto form-control" id="bookAuthor" type="text" placeholder="Author" required>
+        <input class="d-block btn btn-primary px-4 float-right" id="addBtn" type="submit" value="Add">
+      </form>
+    </section>
   </main>
-  <section>
-    <h2>Add a Book</h2>
-    <form id="addBook" onsubmit="BookCollection.addNewBook()">
-      <input id="bookTitle" type="text" placeholder="Title" required>
-      <input id="bookAuthor" type="text" placeholder="Author" required>
-      <input id="addBtn" type="submit" value="Add">
-    </form>
-  </section>
 
   <script src="app.js"></script>
 </body>
