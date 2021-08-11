@@ -56,9 +56,9 @@ class BookCollection {
       const bookContainer = document.createElement('li');
       const titlePTag = document.createElement('p');
       titlePTag.appendChild(document.createTextNode(`"${book.title}" by ${book.author}`));
-      titlePTag.classList.add('ms-5')
+      titlePTag.classList.add('ms-5');
       bookContainer.id = index;
-      bookContainer.classList.add('d-flex', 'justify-content-between')
+      bookContainer.classList.add('d-flex', 'justify-content-between');
 
       const removeButtonTag = document.createElement('button');
       removeButtonTag.appendChild(document.createTextNode('Remove'));

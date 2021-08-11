@@ -8,7 +8,7 @@ li {
 }
 
 li:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.1) ;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 p {
@@ -20,7 +20,7 @@ p {
 }
 
 .mint-bottom-border {
-border-bottom: 4px solid #78c2ad;
+  border-bottom: 4px solid #78c2ad;
 }
 
 .float-right {
