@@ -20,16 +20,12 @@ Basic website that allows users to add/remove books from a list.
 
 ## How to use this repo
 
-1. Clone the repo
-2. In your terminal, run `npm install`
+1. Clone the repo using this link:  https://github.com/alef-garrido/theAwesomeBooks.git
+2. On your terminal use ```git clone <paste the link>```
+3. Cd to the folder that was created and open it on your prefered IDE. 
 
 
 You are good to go! 
-
-## When you are ready to go to production
-
-1. In your terminal, run `npm run build`. The final version of your site will be in the `dist` folder.
-
 
 ## Authors
 
@@ -43,3 +39,8 @@ You are good to go!
 - GitHub: [lef-garrido](https://github.com/alef-garrido)
 - Twitter: [Alef_Garrido](https://twitter.com/Alef_Garrido)
 - LinkedIn: [alef-g](https://www.linkedin.com/in/alef-g/)
+
+## Thanks to
+
+- Microverse
+- Bootswatch.com
