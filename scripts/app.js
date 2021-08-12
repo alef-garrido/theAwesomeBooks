@@ -114,6 +114,7 @@ listOption.addEventListener("click", function (e) {
 
 addNewOption.addEventListener("click", function (e) {
   e.target.classList.toggle = "active";
+  listOption.firstElementChild.classList.remove("active");
   listSection.style.display = "none";
   addNewBookSection.style.display = "block";
   contactSection.style.display = "none";
@@ -121,6 +122,7 @@ addNewOption.addEventListener("click", function (e) {
 
 contactOption.addEventListener("click", function (e) {
   e.target.classList.toggle = "active";
+  listOption.firstElementChild.classList.remove("active");
   listSection.style.display = "none";
   addNewBookSection.style.display = "none";
   contactSection.style.display = "block";
@@ -131,7 +133,6 @@ contactOption.addEventListener("click", function (e) {
 
 var DateTime = luxon.DateTime;
 let time = DateTime.now().toLocaleString(DateTime.DATETIME_MED)
-console.log(time)
 
 const timeContainer = document.querySelector('#dateTime')
 const date = document.createElement('p')
