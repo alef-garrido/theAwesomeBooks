@@ -33,14 +33,16 @@ class BookCollection {
   books = [];
 
   static addNewBook() {
-    const title = document.getElementById("bookTitle").value;
-    const author = document.getElementById("bookAuthor").value;
+    let title = document.getElementById("bookTitle").value;
+    let author = document.getElementById("bookAuthor").value;
 
     const newBook = new Book(title, author);
 
     this.books.push(newBook);
     CollectionStorage.saveToStorage(this.books);
     this.bookList();
+    document.getElementById("bookTitle").value = '';
+    document.getElementById("bookAuthor").value = '';
   }
 
   static removeBook(id) {

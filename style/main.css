@@ -8,6 +8,10 @@ li {
   align-items: baseline;
 }
 
+#contact > li {
+  padding: 0;
+}
+
 ul#books li:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.1);
 }
