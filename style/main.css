@@ -8,7 +8,7 @@ li {
   align-items: baseline;
 }
 
-li:nth-child(odd) {
+ul#books li:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -17,7 +17,7 @@ p {
 }
 
 .headline {
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .mint-bottom-border {
@@ -30,4 +30,9 @@ p {
 
 .empty {
   border: 1px solid #f3969a !important;
+}
+
+#add-new-book-sec,
+#contact-sec {
+  display: none;
 }
