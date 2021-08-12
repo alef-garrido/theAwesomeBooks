@@ -6,7 +6,7 @@ Basic website that allows users to add/remove books from a list.
 
 - Project Goals: Demonstrate ability to use different ways to create objects in JavaScript, and create/access properties and methods of JavaScript objects.
 
-![screenshot](./app_screenshot.png)
+![screenshot](/App-screenshoot.png)
 
 ## Built With
 

@@ -5,6 +5,7 @@ ul {
 
 li {
   padding: 15px 0;
+  align-items: baseline;
 }
 
 li:nth-child(odd) {
@@ -25,4 +26,8 @@ p {
 
 .float-right {
   float: right;
+}
+
+.empty {
+  border: 1px solid #f3969a !important;
 }

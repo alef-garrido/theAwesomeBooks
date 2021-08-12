@@ -27,6 +27,7 @@ class CollectionStorage {
 }
 
 // Class of Book List
+
 class BookCollection {
   books = []
 
@@ -52,21 +53,29 @@ class BookCollection {
 
     this.books = CollectionStorage.getFromStorage();
 
-    this.books.map((book, index) => {
-      const bookContainer = document.createElement('li');
-      const titlePTag = document.createElement('p');
-      titlePTag.appendChild(document.createTextNode(`"${book.title}" by ${book.author}`));
-      titlePTag.classList.add('ms-5');
-      bookContainer.id = index;
-      bookContainer.classList.add('d-flex', 'justify-content-between');
+    if (this.books.length === 0) {
+      const emptyState = document.createElement('p');
+      emptyState.innerHTML = 'Your bookshelf is empty :( <br /> Add some titles!';
+      emptyState.classList.add('text-center', 'p-3');
+      emptyState.classList.add('empty')
+      BookCollectionContainer.append(emptyState);
+    } else {
+      this.books.map((book, index) => {
+        const bookContainer = document.createElement('li');
+        const titlePTag = document.createElement('p');
+        titlePTag.appendChild(document.createTextNode(`"${book.title}" by ${book.author}`));
+        titlePTag.classList.add('ms-5');
+        bookContainer.id = index;
+        bookContainer.classList.add('d-flex', 'justify-content-between');
 
-      const removeButtonTag = document.createElement('button');
-      removeButtonTag.appendChild(document.createTextNode('Remove'));
-      removeButtonTag.classList.add('delete-btn', 'me-5', 'btn', 'btn-secondary');
+        const removeButtonTag = document.createElement('button');
+        removeButtonTag.appendChild(document.createTextNode('Remove'));
+        removeButtonTag.classList.add('delete-btn', 'me-5', 'btn', 'btn-secondary');
 
-      bookContainer.append(titlePTag, removeButtonTag);
-      BookCollectionContainer.appendChild(bookContainer);
-    });
+        bookContainer.append(titlePTag, removeButtonTag);
+        BookCollectionContainer.appendChild(bookContainer);
+      });
+    }
   }
 }
 
