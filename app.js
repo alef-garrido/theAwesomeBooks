@@ -8,6 +8,10 @@ class Book {
   }
 }
 
+var DateTime = luxon.DateTime;
+console.log(DateTime)
+
+
 // Class to Handle Storage
 
 class CollectionStorage {
@@ -45,6 +49,7 @@ class BookCollection {
   static removeBook(id) {
     this.books.splice(id, 1);
     CollectionStorage.saveToStorage(this.books);
+    
   }
 
   static bookList() {
