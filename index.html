@@ -9,42 +9,46 @@
   <link rel="stylesheet" href="style/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  
   <title>Awesome Books</title>
 </head>
 
 <body onload="BookCollection.bookList()">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <h1 class="headline d-inline-block mx-auto">
-          <i class="fas fa-book"></i>
-          The Awesome Books
-        </h1>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <h1 class="headline d-inline-block mx-auto">
+            <i class="fas fa-book"></i>
+            The Awesome Books
+          </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+          aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarColor03">
-        <ul class="navbar-nav me-auto w-100 flex-row-reverse">
-          <li class="nav-item" id="contact-option">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item" id="add-new-option">
-            <a class="nav-link" href="#">Add new</a>
-          </li>
-          <li class="nav-item" id="list-option">
-            <a class="nav-link active" href="#">List
-              <span class="visually-hidden">(current)</span>
-            </a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav me-auto w-100 flex-row-reverse">
+            <li class="nav-item" id="contact-option">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item" id="add-new-option">
+              <a class="nav-link" href="#">Add new</a>
+            </li>
+            <li class="nav-item" id="list-option">
+              <a class="nav-link active" href="#">List
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+    <div id="dateTime">
     </div>
-  </nav>
-
+</header>
   <main class="w-50 mx-auto">
     <section class="m-5 card" id="list-sec">
       <ul class="w-100 p-0 mb-0" id="books">
@@ -61,12 +65,18 @@
     </section>
 
     <section class="my-5" id="contact-sec">
-      <p>contacts</p>
+      <h3 class="text-center my-5">Contact Information</h3>
+      <p class="my-4 lead">Do you have any questions or just want to say "Hello!"? <br /> You can reach out to us:</p>
+      <ul id="contact">
+        <li class="my-0">Our email: theawesomebooks@gmail.com</li>
+        <li class="my-0">Our phone: 001 5378 7372</li>
+        <li class="my-0">Our address: Books Ave. #33, myCity, myCountry </li>
+      </ul>
     </section>
   </main>
 
-  <script src="luxon-min"></script>
-  <script src="app.js"></script>
+  <script src="https://moment.github.io/luxon/global/luxon.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 
 </html>
